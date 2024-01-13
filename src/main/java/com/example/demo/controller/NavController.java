@@ -23,5 +23,10 @@ public class NavController {
 		return "new_song";
 	}
 	
+//	@GetMapping("/logout")
+//	public String logout() {
+//		return "";
+//	}
+	
 
 }
