@@ -34,14 +34,11 @@ public class SongController {
 	
 	@GetMapping("/viewSongs")
 	public String viewSong(Model model) {
-		boolean premiumUser = false;
-		if(premiumUser==true) {
+		
 			List<Songs> songList = service.fetchAllSong();
 			model.addAttribute("songs", songList);
 			return "display_song";
-		}else {
-			return"make_payment";
-		}
+		
 		
 	}
 	

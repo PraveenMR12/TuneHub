@@ -3,16 +3,22 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="" th:href="@{/CSS/admin_home.css}" type="text/css"/>
 </head>
 <body>
-<h1>Admin Home Page</h1>
-<a href="newSong">Add new song</a>
+<nav>
+	<h1>Admin Home Page</h1>
+	<a class="logout" href="logout"><button>Logout</button></a>
+	
+</nav>
+<div>
+<a href="newSong"><button>Add new song</button></a>
 <br/>
-<a href="viewSongs">View all song</a>
+<a href="viewSongs"><button>View all song</button></a>
 <br/>
-<a href="createPlaylist">Create Playlist</a>
+<a href="createPlaylist"><button>Create Playlist</button></a>
 <br/>
-<a href="viewPlaylists">View all Playlist</a>
-
+<a href="viewPlaylists"><button>View all Playlist</button></a>
+</div>
 </body>
 </html>

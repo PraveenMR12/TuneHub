@@ -3,9 +3,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="" th:href="@{/CSS/customer_home.css}" type="text/css"/>
 </head>
 <body>
-	<h1>Customer Home Page</h1>
+	<nav>
+		<h1>Customer Home Page</h1>
+		<a href="logout"><button>Logout</button></a>
+	</nav>
 	<div th:unless="${isPremium}" class="non-premium">
 		<a href="pay">SUBSCRIBE</a>
 		<br/>
@@ -37,7 +41,7 @@
 		</table>
 	</div>
 	
-	<a href="logout">Logout</a>
+	
 
 </body>
 </html>

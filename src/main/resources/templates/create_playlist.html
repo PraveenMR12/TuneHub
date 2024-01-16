@@ -3,9 +3,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="" th:href="@{/CSS/create_playlist.css}" type="text/css"/>
 </head>
 <body>
-	<h1>Add Playlist</h1>
+	<nav><h1>Add Playlist</h1></nav>
 	<form action="addPlaylist" method="post">
 		<label>Playlist name : </label>
 		<input type="text" name="name"/>
@@ -16,7 +17,7 @@
 			<label th:text="${song.name}"></label>
 		</div>
 		
-		<input type="submit" value="ADD PLAYLIST">
+		<button type="submit" value="ADD PLAYLIST">Submit</button>
 	</form>
 
 </body>
