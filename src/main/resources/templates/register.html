@@ -1,41 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="" th:href="@{/CSS/register.css}" type="text/css" />
 </head>
 <body>
-<h1>Register to TuneHub</h1>
-<br/>
-	<form action="register" method = "POST">
-		<label>Username : </label>
-		<input type="text" name="username"/>
+	<div class="box">
+		<h1>Register to TuneHub</h1>
 		<br/>
-		
-		<label>Email : </label>
-		<input type="email" name="email"/>
-		<br/>
-		
-		<label>Password : </label>
-		<input type="password" name="password"/>
-		<br/>
-		
-		<label>Gender : </label>
-		M<input type="radio" name="gender" value="male"/>
-		F<input type="radio" name="gender" value="female"/>
-		O<input type="radio" name="gender" value="other"/>
-		<br/>
-		
-		<label>Role : </label>
-		Admin<input type="radio" name="role" value="admin"/>
-		Customer<input type="radio" name="role" value="customer"/>
-		<br/>
-		
-		<label>Address : </label>
-		<textarea name="address"></textarea>
-		<br/>
-		
-		<input type="submit" value="submit"/>
-	</form>
+		<form action="register" method = "POST">
+			<label>Username : </label>
+			<input type="text" name="username"/>
+			<br/>
+			
+			<label>Email : </label>
+			<input type="email" name="email"/>
+			<br/>
+			
+			<label>Password : </label>
+			<input type="password" name="password"/>
+			<br/>
+			
+			<label>Gender : </label>
+			M<input class="role" type="radio" name="gender" value="male"/>
+			F<input class="role" type="radio" name="gender" value="female"/>
+			O<input class="role" type="radio" name="gender" value="other"/>
+			<br/>
+			
+			<label>Role : </label>
+			Admin<input class="role" type="radio" name="role" value="admin"/>
+			Customer<input class="role" type="radio" name="role" value="customer"/>
+			<br/>
+			
+			<label>Address : </label>
+			<textarea name="address"></textarea>
+			<br/>
+			
+			<button type="submit" value="submit">Create Account</button>
+		</form>
+		<div>
+			<a href="/login">Already have an account?</a>
+		</div>
+	</div>
 </body>
 </html>

@@ -1,0 +1,31 @@
+@charset "ISO-8859-1";
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+nav{
+	background-color: #03e9fc;
+	width: 100%;
+	justify-content: center;
+	display: flex;
+	padding: 20px;
+	align-items: center;
+	align-content: center;
+}
+button {
+	padding: 10px;
+	color: white;
+	background-color: maroon;
+	min-width: 100px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	
+}
+#payment-form{
+	justify-content: center;
+	align-items: center;
+	margin-top: 100px;
+	display: flex;
+}

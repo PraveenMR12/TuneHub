@@ -3,14 +3,16 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="" th:href="@{/CSS/display_playlist.css}" type="text/css"/>
+
 </head>
 <body>
-	<h1>Playlists</h1>
+	<nav><h1>Playlists</h1></nav>
 	<table border="1">
 	  <thead>
 		  <tr>
 		    <th>Name</th>
-		    <th>Artist</th>
+		    <th>Songs</th>
 		  </tr>
 	  </thead>
 	  <tbody>
@@ -19,10 +21,12 @@
 		    <td>
 		    	<ul>
 		    		<li th:each="song:${playlist.songs}">
-				    	<span th:text="${song.name}"></span>
-				    	<audio controls>
-			     			<source th:src="${song.link}" type="audio/mp3">
-			      		</audio>
+				    	<div class="songs">
+				    		<span th:text="${song.name}"></span>
+					    	<audio controls>
+				     			<source th:src="${song.link}" type="audio/mp3">
+				      		</audio>
+				    	</div>
 		    		</li>
 		    	</ul>
 		    </td>

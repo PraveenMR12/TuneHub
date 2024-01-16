@@ -60,8 +60,11 @@ public class UsersController {
 				
 				return "admin_home";
 			}else {
+				
 				Users user = service.getUser(email);
 				boolean userStatus = user.isPremium();
+				String name = user.getUsername();
+				model.addAttribute("name", name);
 				model.addAttribute("isPremium", userStatus);
 				List<Songs> songList = songService.fetchAllSong();
 				model.addAttribute("songs", songList);
